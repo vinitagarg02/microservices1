@@ -1,4 +1,4 @@
-node {
+/* node {
 
     withMaven(maven:'maven') {
 
@@ -32,8 +32,8 @@ node {
 
     }
 
-	}
-/*pipeline {
+	} */
+pipeline {
     agent any
     
 	stages {
@@ -52,4 +52,3 @@ node {
 			}       
 		}
 	}
-*/
