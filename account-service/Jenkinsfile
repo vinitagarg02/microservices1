@@ -39,13 +39,13 @@ pipeline {
 	stages {
         stage('Checkout') {
            steps { 
-				git url: 'https://github.com/habsh/microservice1.git', credentialsId: 'habsh', branch: 'master'
+				git url: 'https://github.com/vinitagarg02/microservices1.git', credentialsId: 'github', branch: 'main'
 		   }
         }
 
         stage('Build') {
 			steps {
-				bat 'cd ./account-service'
+				
 				bat 'mvn clean install'
 				
 				}
