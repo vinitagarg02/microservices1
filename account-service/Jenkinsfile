@@ -3,10 +3,10 @@ node {
     withMaven(maven:'maven') {
 
         stage('Checkout') {
-            git url: 'https://github.com/vinitagarg02/microservice1.git', credentialsId: 'github', branch: 'main'
+            git url: 'https://github.com/vinitagarg02/microservices1.git', credentialsId: 'github', branch: 'main'
         }
         stage('Build') {
-             mvn clean install
+            sh 'mvn clean install'
 
             def pom = readMavenPom file:'pom.xml'
             print pom.version
